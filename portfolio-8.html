@@ -19,9 +19,71 @@
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
 
+    <style>
+        .owl-prev, .owl-next {
+            background-color: #333; /* Background color of the arrows */
+            color: #fff;            /* Color of the arrow icons */
+            padding: 10px 15px;     /* Padding around the arrow icons */
+            border-radius: 50%;     /* Make the arrows circular */
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .owl-prev {
+            left: -40px; /* Positioning the left arrow outside the carousel */
+        }
+
+        .owl-next {
+            right: -40px; /* Positioning the right arrow outside the carousel */
+        }
+
+        .owl-prev:hover, .owl-next:hover {
+            background-color: #555; /* Change background color on hover */
+        }
+
+        .owl-dots {
+            text-align: center;
+            margin-top: 20px; /* Space between the dots and the carousel */
+        }
+
+        .owl-dot {
+            display: inline-block;
+            width: 12px;  /* Width of each dot */
+            height: 12px; /* Height of each dot */
+            background-color: #ddd; /* Default dot color */
+            border-radius: 50%; /* Make the dots circular */
+            margin: 0 5px; /* Space between dots */
+            cursor: pointer;
+        }
+
+        .owl-dot.active {
+            background-color: #333; /* Color of the active dot */
+        }
+
+        .owl-dot:hover {
+            background-color: #555; /* Color of the dot on hover */
+        }
+
+        .owl-carousel .item img {
+            width: 100%;  /* Make the image take up the full width of the item */
+            height: auto; /* Maintain the aspect ratio of the image */
+            border-radius: 10px; /* Add rounded corners to the images */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the images */
+        }
+
+        .portfolio-page-carousel {
+            max-width: 800px; /* Limit the width of the carousel */
+            margin: 0 auto;   /* Center the carousel horizontally */
+            padding: 20px;    /* Add some padding around the carousel */
+            background-color: #f8f8f8; /* Background color of the carousel container */
+            border-radius: 15px; /* Add rounded corners to the container */
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15); /* Add a shadow to the container */
+        }
+    </style>
+
 </head>
 <body>
-    
 
 <div id="ajax-page" class="ajax-page-content">
     <div class="ajax-page-wrapper">
@@ -53,22 +115,20 @@
                     </div>
                 </div>
 
-                <!-- <div class="portfolio-page-video embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/97102654?autoplay=0"></iframe>
-                </div> -->
-
                 <script type="text/javascript">
                     jQuery(document).ready(function($){
                         $('.portfolio-page-carousel').imagesLoaded(function(){
                             $('.portfolio-page-carousel').owlCarousel({
-                                smartSpeed:1200,
+                                smartSpeed: 800, /* Speed of the slide transition */
                                 items: 1,
                                 loop: true,
                                 dots: true,
                                 nav: true,
-                                navText: false,
+                                navText: ['<i class="lnr lnr-chevron-left"></i>', '<i class="lnr lnr-chevron-right"></i>'], /* Custom arrow icons */
                                 margin: 10,
-                                autoHeight:true
+                                autoHeight: true,
+                                animateOut: 'fadeOut', /* Add fade out effect */
+                                animateIn: 'fadeIn' /* Add fade in effect */
                             });
                         });
                     });
@@ -76,11 +136,17 @@
             </div>
 
             <div class="col-sm-8 col-md-8 portfolio-block">
-            <img src="img/portfolio/Clinic Controll.jpeg" alt="Your Picture" />
-            <br>
-            <img src="img/portfolio/login.jpeg" alt="Your Picture" />
-            <br>
-            <img src="img/portfolio/patient.jpeg" alt="Your Picture" />
+                <a href="img/portfolio/Clinic Controll.jpeg" class="image-popup">
+                    <img src="img/portfolio/Clinic Controll.jpeg" alt="Your Picture" />
+                </a>
+                <br>
+                <a href="img/portfolio/login.jpeg" class="image-popup">
+                    <!-- <img src="img/portfolio/login.jpeg" alt="Your Picture" /> -->
+                </a>
+                <br>
+                <a href="img/portfolio/patient.jpeg" class="image-popup">
+                    <!-- <img src="img/portfolio/patient.jpeg" alt="Your Picture" /> -->
+                </a>
             </div>
 
             <div class="col-sm-4 col-md-4 portfolio-block">
@@ -132,7 +198,6 @@
     </div>
 </div>
 
-
 <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     
 <script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/jquery-2.1.3.min.js"></script>
@@ -151,8 +216,18 @@
 <script src="js/validator.js"></script>
 <script src="js/main.js"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"85872ceb0e0121f5","version":"2024.2.1","r":1,"token":"94b99c0576dc45bf9d669fb5e9256829","b":1}' crossorigin="anonymous"></script>
-</body>
 
-
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('.image-popup').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true // This will enable the slider
+            },
+            removalDelay: 300, // Delay in milliseconds before popup is removed
+            mainClass: 'mfp-fade', // This is the class that will be added to the popup to create a fade effect
+        });
+    });
+</script>
 </body>
 </html>
