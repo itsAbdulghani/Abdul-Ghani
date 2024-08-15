@@ -75,9 +75,24 @@
                 </script>
             </div>
 
-            <div class="col-sm-8 col-md-8 portfolio-block">
+            <!-- <div class="col-sm-8 col-md-8 portfolio-block">
                 <img src="img/portfolio/suitcase.jpeg" alt="Your Picture" />
+            </div> -->
+
+            <div class="col-sm-8 col-md-8 portfolio-block">
+                <a href="img/portfolio/suitcase.jpeg" class="image-popup">
+                    <img src="img/portfolio/suitcase.jpeg" alt="Your Picture" />
+                </a>
+                <br>
+                <a href="img/portfolio/suitcase packages.jpeg" class="image-popup">
+                    <!-- <img src="img/portfolio/login.jpeg" alt="Your Picture" /> -->
+                </a>
+                <br>
+                <a href="img/portfolio/suitcase package details.jpeg" class="image-popup">
+                    <!-- <img src="img/portfolio/patient.jpeg" alt="Your Picture" /> -->
+                </a>
             </div>
+
 
             <div class="col-sm-4 col-md-4 portfolio-block">
                 <!-- Project Description -->
@@ -147,6 +162,20 @@
 <script src="js/validator.js"></script>
 <script src="js/main.js"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"85872ceb0e0121f5","version":"2024.2.1","r":1,"token":"94b99c0576dc45bf9d669fb5e9256829","b":1}' crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('.image-popup').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true // This will enable the slider
+            },
+            removalDelay: 300, // Delay in milliseconds before popup is removed
+            mainClass: 'mfp-fade', // This is the class that will be added to the popup to create a fade effect
+        });
+    });
+</script>
+
 </body>
 
 
