@@ -99,12 +99,25 @@
                 <li><a href="https://api.whatsapp.com/send/?phone=03032477219&text&type=phone_number&app_absent=0" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
               </ul>
             </div>
+<!-- enter a valid command here  -->
+
+
 
             <div class="header-buttons">
               <a href="img/Abdul Ghani CV_3.pdf" target="_blank" Download class="btn btn-primary">View CV</a>
             </div>
 
-            <div class="copyrights">© 2024 All rights reserved.</div>
+            <div class="copyrights">© <span id="current-year"></span> All rights reserved.</div>
+
+            <script>
+                // Get the current year
+                const currentYear = new Date().getFullYear();
+            
+                // Set the current year in the span with id 'current-year'
+                document.getElementById('current-year').textContent = currentYear;
+            </script>
+
+            
           </header>
 
           <!-- Mobile Navigation -->
@@ -312,6 +325,19 @@
                             <h4 class="item-title">Computer Technology</h4>
                             <p>
                               I'm pursuing a Computer Technology Bachelor's at Karachi University, deepening my skills in one of Karachi's top programs. It's a pivotal step in my journey towards excellence in the tech domain.</p>
+                          </div>
+                        </div>
+
+                        <div class="timeline-item clearfix">
+                          <div class="left-part">
+                            <h5 class="item-period">2024 - Current</h5>
+                            <span class="item-company">NED University</span>
+                          </div>
+                          <div class="divider"></div>
+                          <div class="right-part">
+                            <h4 class="item-title">UGD in Cyber Security</h4>
+                            <p>
+                              I am currently enrolled in an undergraduate Cyber Security diploma program at NED University to expand my knowledge of digital security. This course is a vital part of my journey to mastering cybersecurity, allowing me to develop the skills needed to safeguard digital environments and networks.</p>
                           </div>
                         </div>
                       </div>
@@ -789,7 +815,6 @@
       });
   });
     </script>
-    
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     
@@ -808,7 +833,7 @@
 
     <script src="js/validator.js"></script>
     <script src="js/main.js"></script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"85872ceb0e0121f5","version":"2024.2.1","r":1,"token":"94b99c0576dc45bf9d669fb5e9256829","b":1}' crossorigin="anonymous"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"85872ceb0e0121f5","version":"2024.2.1","r":1,"token":"94b99c0576dc45bf9d669fb5e9256829","b":1}' crossorigin="anonymous"></script>
 </body>
 
 </html>
